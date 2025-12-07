@@ -16,7 +16,7 @@ sub_heading.SetFont(wx.Font(24, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FON
 sub_heading.SetForegroundColour("#922B21")
 
 #BMI IMAGE
-bmi_img = wx.Image("bmi2.png")      # your file name
+bmi_img = wx.Image("bmi2.png")      
 bmi_img = bmi_img.Scale(350, 170)
 bmi_bmp = wx.Bitmap(bmi_img)
 
@@ -36,21 +36,14 @@ paragraph = wx.StaticText(panel, label=text, pos=(40, 200))
 paragraph.SetFont(wx.Font(16, wx.FONTFAMILY_SWISS, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL))
 
 #panel 2
-# SHADOW PANEL (larger)
+# SHADOW PANEL
 shadow = wx.Panel(panel, pos=(40, 360), size=(460, 260))
 shadow.SetBackgroundColour("#FFF9DB")
 
-# FORM PANEL (smaller & above shadow)
+# FORM PANEL
 form_panel = wx.Panel(panel, pos=(30, 350), size=(450, 250))
-
 form_panel.SetBackgroundColour("#FCE5B2")
 form_panel.Raise()
-
-
-
-
-
-
 
 # GENDER LABEL
 gender = wx.StaticText(form_panel, label="Gender:", pos=(20, 20))
